@@ -1,0 +1,19 @@
+input {
+  border-radius: 8px;
+  width: 272px;
+  height: 40px;
+  background: #fff;
+}
+button {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  background-color: #4e75ff;
+}
