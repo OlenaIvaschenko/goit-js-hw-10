@@ -1,11 +1,49 @@
+.upper-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 55px;
+  height: 72px;
+}
+.value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2e2f42;
+}
 input {
   border-radius: 8px;
   width: 272px;
   height: 40px;
   background: #fff;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
 button {
-  font-family: var(--font-family);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -15,5 +53,15 @@ button {
   padding: 8px 16px;
   width: 75px;
   height: 40px;
+  background-color: #cfcfcf;
+
+  color: #989898;
+  border: none;
+}
+#start-button:hover {
+  background-color: #6c8cff;
+  color: #fff;
+}
+#start-button:normal {
   background-color: #4e75ff;
 }
