@@ -58,10 +58,34 @@ button {
   color: #989898;
   border: none;
 }
-#start-button:hover {
-  background-color: #6c8cff;
+input:hover {
+  border: 1px solid #000;
+  color: #2e2f42;
+}
+input:active {
+  border: 1px solid #4e75ff;
+  color: #000;
+}
+input:disabled {
+  border: 1px solid #808080;
+  color: #808080;
+}
+button#start-button:hover {
+  background: #6c8cff;
   color: #fff;
 }
-#start-button:normal {
-  background-color: #4e75ff;
+button#start-button:disabled {
+  background: #cfcfcf;
+  color: #989898;
+}
+button#start-button {
+  background: #4e75ff;
+  color: #fff;
+}
+.iziToast {
+  border-radius: 4px;
+  padding: 20px;
+  width: 302px;
+  height: 64px;
+  background-color: #ef4040;
 }

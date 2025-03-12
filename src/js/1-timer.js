@@ -37,8 +37,9 @@ function startCount() {
       datetimePicker.disabled = false;
       return;
     }
-    const timeArray = convertMs(timeLeft);
-    const { days, hours, minutes, seconds } = timeArray;
+    // const timeArray = convertMs(timeLeft);
+    // const { days, hours, minutes, seconds } = timeArray;
+    const { days, hours, minutes, seconds } = convertMs(timeLeft);
 
     dataDays.textContent = String(days).padStart(2, '0');
     dataHours.textContent = String(hours).padStart(2, '0');
@@ -55,9 +56,23 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    console.log(selectedDates[0]);
+    const selectedDate = new Date(selectedDates[0]).getTime();
+    if (selectedDate <= Date.now()) {
+      iziToast.error({
+        message: 'Please choose a date in the future',
+        position: 'topRight',
+      });
+      startButton.disabled = true;
+      return;
+    } else {
+      userSelectedDate = selectedDate;
+      startButton.disabled = false;
+    }
+    clearInterval(countdownInterval);
   },
 };
+
+flatpickr('#datetime-picker', options);
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
