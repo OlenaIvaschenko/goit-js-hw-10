@@ -4,14 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 3</title>
-    <script type="module" crossorigin src="/goit-js-hw-10/assets/styles-DO0P_umc.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-C4N5Ntfg.css">
+    <title>Snackbar</title>
+    <script type="module" crossorigin src="/goit-js-hw-10/2-snackbar.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/styles-Cu5NhK-P.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-CfT0t7hE.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
   </head>
   <body>
     <main>
       <p><a class="navigation" href="./index.html">Go back</a></p>
-      <div class="container"></div>
+    
+      <form class="form">
+        <label class="delay-label">
+          Delay (ms)
+          <input class="delay-input" type="number" name="delay" required />
+        </label>
+
+        <div class="state-wrapper">
+        <fieldset>
+          
+          <legend>State</legend>
+          <label class="label-fulfilled">
+            <input class="input-fulfilled" type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+          <label class="label-rejected">
+            <input  class ="input-rejected" type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button class="submit-button" type="submit">Create notification</button>
+      </form>
+    </div>
     </main>
 
   </body>
