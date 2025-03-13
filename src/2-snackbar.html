@@ -4,13 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 3</title>
+    <title>Snackbar</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <main>
       <p><a class="navigation" href="./index.html">Go back</a></p>
-      <div class="container"></div>
+    
+      <form class="form">
+        <label class="delay-label">
+          Delay (ms)
+          <input class="delay-input" type="number" name="delay" required />
+        </label>
+
+        <div class="state-wrapper">
+        <fieldset>
+          
+          <legend>State</legend>
+          <label class="label-fulfilled">
+            <input class="input-fulfilled" type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+          <label class="label-rejected">
+            <input  class ="input-rejected" type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button class="submit-button" type="submit">Create notification</button>
+      </form>
+    </div>
     </main>
 
     <script type="module" src="./js/2-snackbar.js"></script>

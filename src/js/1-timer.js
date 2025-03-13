@@ -7,8 +7,10 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 // Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
+import iconCross from '../img/icon/cross-min.png';
 
 // console.log('Скрипт 1-timer.js працює!');
+
 // document.body.style.backgroundColor;
 const datetimePicker = document.querySelector('#datetime-picker');
 const startButton = document.querySelector('#start-button');
@@ -61,6 +63,13 @@ const options = {
       iziToast.error({
         message: 'Please choose a date in the future',
         position: 'topRight',
+        messageColor: '#fff',
+        backgroundColor: '#ef4040',
+        iconColor: '#fff;',
+        titleColor: '#fff',
+        close: true,
+        closeColor: '#fff',
+        iconUrl: iconCross,
       });
       startButton.disabled = true;
       return;

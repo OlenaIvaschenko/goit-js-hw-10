@@ -1,3 +1,109 @@
 body {
   visibility: visible;
 }
+* {
+  box-sizing: border-box;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  /* width: 360px;  */
+  /* margin: 36px auto; */
+  margin-left: 156px;
+}
+
+/* .label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42; 
+  }*/
+legend {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.delay-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  justify-content: center;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  /* align-content: center;
+   */
+}
+.delay-input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+}
+.delay-input:hover {
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+.delay-input:active {
+  border: 1px solid #4e75ff;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  width: 360px;
+
+  margin-bottom: 24px;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.state-wrapper {
+  display: flex;
+  /* justify-content: center; */
+  align-items: start;
+  flex-direction: column;
+}
+.input-fulfilled,
+.input-rejected {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2e2f42;
+  border: 1px solid #757575;
+  border-radius: 14px;
+  width: 20px;
+  height: 20px;
+  padding-right: 4px;
+}
+.submit-button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
