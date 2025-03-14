@@ -60,3 +60,49 @@ const informingMessage = {
   closeColor: '#fff',
   iconUrl: iconBell,
 };
+
+iziToast.show({
+  ...informingMessage,
+});
+
+document.querySelector('button').addEventListener('click', () => {
+  event.preventDefault();
+
+  const delayInput = document.querySelector('input[name="delay"]');
+  if (!delayInput) return; // Якщо елемент не знайдений, вийти
+  const delay = Number(delayInput.value); // Читаємо значення при кліку
+
+  if (isNaN(delay) || delay < 0) {
+    iziToast.show({
+      ...cautionMessage, // Передаємо всі властивості з об'єкта
+    });
+    return;
+  }
+
+  console.log(delay);
+
+  const isSuccess =
+    document.querySelector('input[name="state"]:checked')?.value ===
+    'fulfilled';
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (isSuccess) {
+        iziToast.success({
+          ...successMessage,
+          message: `✅ Fulfilled promise in ${delay}ms`,
+        });
+        resolve(`Fulfilled in ${delay}ms`);
+      } else {
+        iziToast.error({
+          ...errorMessage,
+          message: `❌ Rejected promise in ${delay}ms`,
+        });
+        reject(`Rejected in ${delay}ms`);
+      }
+    }, delay);
+  });
+  promise
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+  form.reset();
+});
