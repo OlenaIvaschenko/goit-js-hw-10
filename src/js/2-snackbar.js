@@ -103,6 +103,6 @@ document.querySelector('button').addEventListener('click', event => {
   });
   promise
     .then(result => console.log(`✅ Fulfilled in ${result}ms`))
-    .catch(error => console.error(`❌ Rejected in ${error}ms`));
+    .catch(error => console.log(`❌ Rejected in ${error}ms`));
   form.reset();
 });
