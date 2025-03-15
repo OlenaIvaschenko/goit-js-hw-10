@@ -65,12 +65,12 @@ iziToast.show({
   ...informingMessage,
 });
 
-document.querySelector('button').addEventListener('click', () => {
+document.querySelector('button').addEventListener('click', event => {
   event.preventDefault();
 
   const delayInput = document.querySelector('input[name="delay"]');
   if (!delayInput) return; // Якщо елемент не знайдений, вийти
-  const delay = Number(delayInput.value); // Читаємо значення при кліку
+  const delay = Number(delayInput.value); //
 
   if (isNaN(delay) || delay < 0) {
     iziToast.show({
@@ -91,18 +91,18 @@ document.querySelector('button').addEventListener('click', () => {
           ...successMessage,
           message: `✅ Fulfilled promise in ${delay}ms`,
         });
-        resolve(`Fulfilled in ${delay}ms`);
+        resolve(delay);
       } else {
         iziToast.error({
           ...errorMessage,
           message: `❌ Rejected promise in ${delay}ms`,
         });
-        reject(`Rejected in ${delay}ms`);
+        reject(delay);
       }
     }, delay);
   });
   promise
-    .then(result => console.log(result))
-    .catch(error => console.error(error));
+    .then(result => console.log(`✅ Fulfilled in ${result}ms`))
+    .catch(error => console.error(`❌ Rejected in ${error}ms`));
   form.reset();
 });
